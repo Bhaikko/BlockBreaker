@@ -471,6 +471,7 @@ GameObject:
   - component: {fileID: 684288363}
   - component: {fileID: 684288366}
   - component: {fileID: 684288365}
+  - component: {fileID: 684288367}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -536,7 +537,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684288362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.63, y: 8.53, z: 0}
+  m_LocalPosition: {x: 8, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -579,6 +580,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &684288367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684288362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3222f069fc8283448575c6bff98f845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle: {fileID: 1712101955}
 --- !u!1 &772985915
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +815,7 @@ GameObject:
   - component: {fileID: 1712101953}
   - component: {fileID: 1712101952}
   - component: {fileID: 1712101954}
+  - component: {fileID: 1712101955}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -866,7 +881,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712101951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.85, y: 0.45, z: 0}
+  m_LocalPosition: {x: 8, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -904,3 +919,16 @@ PolygonCollider2D:
       - {x: 1, y: -0.25}
       - {x: 1.0000005, y: 0.043486774}
       - {x: 0.8180547, y: 0.1227411}
+--- !u!114 &1712101955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712101951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94bf55412f5748544bd3333e47624d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenWidth: 16

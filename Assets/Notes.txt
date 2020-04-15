@@ -2,3 +2,10 @@
 
 Physics Material is added to Collider for Bounciness and Friction
 Refer To BoxCollider, Physics Material and RigidBody docs
+
+// Lecture 56, Launch The Ball
+Component Except transform are ambigous, Hence are need to get By
+GetComponent<Component>();
+
+To Add velocity or set it, Use
+GetComponent<RigidBody2D>().velocity = Vector2(velX, velY);
