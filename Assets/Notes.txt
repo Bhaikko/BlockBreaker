@@ -1,0 +1,4 @@
+// Lecture 51, Add Unity Physics Material
+
+Physics Material is added to Collider for Bounciness and Friction
+Refer To BoxCollider, Physics Material and RigidBody docs
