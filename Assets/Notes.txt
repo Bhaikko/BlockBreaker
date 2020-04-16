@@ -12,3 +12,8 @@ GetComponent<RigidBody2D>().velocity = Vector2(velX, velY);
 
 // Lecture 59, Prefabs
 Prefabs are templates for other game objects to use
+
+// Lecture 65, 
+Audio Listener - "Hearing the sound"
+Audio Source - "Playing the sound"
+Audio Clip - "The Sound"
