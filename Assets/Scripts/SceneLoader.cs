@@ -8,7 +8,6 @@ public class SceneLoader : MonoBehaviour
     public void LoadNextScene()
     {
         int totalScenes = SceneManager.sceneCountInBuildSettings;
-        Debug.Log(totalScenes);
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;   // Get current scene index in list of Scenes defined in Build Settings of project
         SceneManager.LoadScene((currentSceneIndex + 1) % totalScenes);
     }
