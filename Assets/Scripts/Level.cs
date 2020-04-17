@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    [SerializeField] SceneLoader sceneLoader = null;
-
     int blocksLeft = 0;
 
-    // Start is called before the first frame update
+    SceneLoader sceneLoader;
+
     void Start()
     {
         // Done using Rick's way
         //blocksLeft = FindObjectsOfType<Block>().Length;
+        sceneLoader = FindObjectOfType<SceneLoader>();
     }
 
     public void AddBlock()
@@ -20,7 +20,7 @@ public class Level : MonoBehaviour
         blocksLeft++;
     }
 
-    public void BlockBroke()
+    public void BLockDestroyed()
     {
         blocksLeft--;
         if (blocksLeft <= 0)
