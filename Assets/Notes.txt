@@ -17,3 +17,9 @@ Prefabs are templates for other game objects to use
 Audio Listener - "Hearing the sound"
 Audio Source - "Playing the sound"
 Audio Clip - "The Sound"
+
+// Lecture 70,
+Singleton Pattern 
+USed to persist gameObjects across Game scenes
+
+SingleTon Pattern Applies to its children too.
