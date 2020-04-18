@@ -23,3 +23,17 @@ Singleton Pattern
 USed to persist gameObjects across Game scenes
 
 SingleTon Pattern Applies to its children too.
+
+// Lecture 74,
+Tags: is a reference word which you can assign to one or more Gameobjects.
+Helps you identify gameObjects for scripting purposes
+
+// Lecture 75
+Variables can be classified into 3 type
+Configuration Parameters, specifies initial state of gameObject
+Cached References, references of other components
+State variables, that changes in runtime. Can be serialized for debuggin purposes.
+
+// Lecture 76
+Player Affordance, provides strong clues to the operation of things.
+Visual clues to tell the player how something works

@@ -522,10 +522,30 @@ PrefabInstance:
       propertyPath: level
       value: 
       objectReference: {fileID: 1919561056}
+    - target: {fileID: -1759223836851029518, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
+        type: 3}
+      propertyPath: maxHits
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2580104796324127865, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
       propertyPath: m_Name
       value: Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580104796324127866, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580104796324127866, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580104796324127866, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.08696699
       objectReference: {fileID: 0}
     - target: {fileID: 2580104796324127867, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
@@ -535,7 +555,7 @@ PrefabInstance:
     - target: {fileID: 2580104796324127867, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.57
+      value: 3.76
       objectReference: {fileID: 0}
     - target: {fileID: 2580104796324127867, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
