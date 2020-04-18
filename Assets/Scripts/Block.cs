@@ -8,7 +8,7 @@ public class Block : MonoBehaviour
     // configuration parameters
     [SerializeField] AudioClip breakSound = null;
     [SerializeField] GameObject blockSparkles = null;
-    [SerializeField] int maxHits = 1;
+    //[SerializeField] int maxHits = 1;
     [SerializeField] Sprite[] hitSprites = null;
 
     // Cached Reference
@@ -40,7 +40,7 @@ public class Block : MonoBehaviour
         if (tag == "Breakable")
         {
             timesHit++;
-
+            int maxHits = hitSprites.Length + 1;
             if (timesHit >= maxHits)
             {
                 DestroyBlock();
@@ -56,7 +56,10 @@ public class Block : MonoBehaviour
     private void ShowNextHitSprite()
     {
         int spriteIndex = timesHit - 1;
-        GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        if (hitSprites[spriteIndex])
+        {
+            GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        }
     }
 
     private void DestroyBlock()
