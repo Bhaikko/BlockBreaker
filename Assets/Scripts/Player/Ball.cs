@@ -66,7 +66,7 @@ namespace BlockBreaker.Player {
 
             if (hasStarted) {
                 AudioClip clip = ballSounds[Random.Range(0, ballSounds.Length)];
-                audioSource.PlayOneShot(clip);
+                // audioSource.PlayOneShot(clip);
 
                 rigidBody2D.velocity += velocityTweak;
             

@@ -5,7 +5,12 @@ using UnityEngine;
 namespace BlockBreaker.Player {
     public class Paddle : MonoBehaviour
     {
-        [SerializeField] float screenWidth = 16.0f;
+        // [SerializeField] float screenWidth = 16.0f;
+        private float screenWidth = 0.0f;
+
+        void Start() {
+            screenWidth = 2.625f * Camera.main.orthographicSize;
+        }
 
         // Update is called once per frame
         void Update()
