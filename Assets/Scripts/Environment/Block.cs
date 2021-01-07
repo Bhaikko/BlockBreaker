@@ -13,21 +13,25 @@ namespace BlockBreaker.Environment {
         [SerializeField] AudioClip breakSound = null;
         [SerializeField] GameObject blockSparkles = null;
 
-        //[SerializeField] int maxHits = 1;
+        [SerializeField] int health = 1;
         [SerializeField] Sprite[] hitSprites = null;
 
         // Cached Reference
         GameMode gameMode;
         GameStatus gameStatus;
+        SpriteRenderer spriteRenderer;
 
         // State variables
-        int timesHit;  // Only serialized for debug purposes
+        int timesHit = 0; 
 
         private void Start()
         {
             CountBreakableBlocks();
 
             gameStatus = FindObjectOfType<GameStatus>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
+
+            spriteRenderer.sprite = hitSprites[timesHit];
         }
 
         private void CountBreakableBlocks()
@@ -43,8 +47,7 @@ namespace BlockBreaker.Environment {
         {
             if (tag == "Breakable") {
                 timesHit++;
-                int maxHits = hitSprites.Length + 1;
-                if (timesHit >= maxHits) {
+                if (timesHit >= health) {
                     DestroyBlock();
                 } else {
                     ShowNextHitSprite();
@@ -55,15 +58,15 @@ namespace BlockBreaker.Environment {
 
         private void ShowNextHitSprite()
         {
-            int spriteIndex = timesHit - 1;
+            int spriteIndex = timesHit;
             if (hitSprites[spriteIndex]) {
-                GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+                spriteRenderer.sprite = hitSprites[spriteIndex];
             }
         }
 
         private void DestroyBlock()
         {
-            gameStatus.AddToScore();
+            // gameStatus.AddToScore();
             AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
 
             // gameObject refers to this game object
