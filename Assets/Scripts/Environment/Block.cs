@@ -13,6 +13,7 @@ namespace BlockBreaker.Environment {
         [SerializeField] AudioClip breakSound = null;
         [SerializeField] GameObject blockSparkles = null;
 
+        [SerializeField] bool isBreakable = true;
         [SerializeField] int health = 1;
         [SerializeField] Sprite[] hitSprites = null;
 
@@ -38,20 +39,22 @@ namespace BlockBreaker.Environment {
         {
             gameMode = FindObjectOfType<GameMode>();
 
-            if (tag == "Breakable") {
+            if (isBreakable) {
                 gameMode.AddBlock();
             }
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (tag == "Breakable") {
-                timesHit++;
-                if (timesHit >= health) {
-                    DestroyBlock();
-                } else {
-                    ShowNextHitSprite();
-                }
+            if (!isBreakable) {
+                return;
+            }
+
+            timesHit++;
+            if (timesHit >= health) {
+                DestroyBlock();
+            } else {
+                ShowNextHitSprite();
             }
 
         }

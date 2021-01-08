@@ -72,5 +72,10 @@ namespace BlockBreaker.Player {
             
             }
         }
+
+        public void ChangeBallSize(float size = 1.0f)
+        {
+            transform.localScale = new Vector3(size, size, size);
+        }
     }
 }
