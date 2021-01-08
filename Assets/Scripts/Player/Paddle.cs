@@ -24,5 +24,21 @@ namespace BlockBreaker.Player {
         }
 
         public Dictionary<Powerup, bool> GetActivePowerups () { return activePowerups; }
+
+        public void ActivatePowerup(Powerup powerup, float duration) {
+            // Handle Stack of Powerups in future
+            activePowerups[powerup] = true;
+
+            StartCoroutine(DeactivatePowerup(powerup, duration));
+        }
+
+        private IEnumerator DeactivatePowerup(Powerup powerup, float duration) {
+
+            yield return new WaitForSeconds(duration);
+            activePowerups[powerup] = false;
+
+            Debug.Log("Deactivating Powerup");
+        }
     }
+
 }
