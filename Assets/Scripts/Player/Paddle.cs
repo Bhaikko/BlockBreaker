@@ -1,26 +1,28 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace BlockBreaker.Player {
+    public enum Powerup {
+        SLOW_BALL
+    }
+
     public class Paddle : MonoBehaviour
     {
-        // [SerializeField] float screenWidth = 16.0f;
-        private float screenWidth = 0.0f;
+        [SerializeField]
+        Dictionary<Powerup, bool> activePowerups = null;
 
-        void Start() {
-            screenWidth = 2.625f * Camera.main.orthographicSize;
+        private void Start() {
+            activePowerups = new Dictionary<Powerup, bool>();
+
+            ResetPowerups();
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-            float newXPos = Input.mousePosition.x / Screen.width * screenWidth;
-            //float newXPos = Input.mousePosition.x;
-            newXPos = Mathf.Clamp(newXPos, 1.0f, screenWidth - 1.0f);
-            Vector2 paddlePos = new Vector2(newXPos, this.transform.position.y);
-
-            this.transform.position = paddlePos;
+        private void ResetPowerups() {
+            activePowerups[Powerup.SLOW_BALL] = false;
         }
+
+        public Dictionary<Powerup, bool> GetActivePowerups () { return activePowerups; }
     }
 }
