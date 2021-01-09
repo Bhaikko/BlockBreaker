@@ -251,8 +251,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupPrefabs:
-  - {fileID: 749633919529412722, guid: fbbd5c1406cc05a49bba91944568f1e0, type: 3}
-  isRandomised: 1
-  specificPickup: {fileID: 749633919529412722, guid: fbbd5c1406cc05a49bba91944568f1e0,
+  - {fileID: 2719266708218872598, guid: 951811bd2433a8b48ab81411eae373e6, type: 3}
+  - {fileID: 2625483049749163350, guid: 9cc2a03360bb45a4fa98413590990e86, type: 3}
+  isRandomised: 0
+  specificPickup: {fileID: 2625483049749163350, guid: 9cc2a03360bb45a4fa98413590990e86,
     type: 3}
   probabilityOfSpawningPickup: 0.25

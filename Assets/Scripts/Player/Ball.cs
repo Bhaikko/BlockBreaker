@@ -93,7 +93,7 @@ namespace BlockBreaker.Player {
         private void CheckForPowerUps(Collision2D collision) {
             Dictionary<Powerup, bool> activePowerups = paddle.GetActivePowerups();
 
-            if (activePowerups[Powerup.SLOW_BALL]) {
+            if (activePowerups[Powerup.MAGNET_BALL]) {
                 launchSpeed = rigidBody2D.velocity.magnitude;
 
                 paddleToBallVector = this.transform.position - paddle.transform.position;

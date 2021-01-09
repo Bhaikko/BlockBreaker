@@ -5,7 +5,8 @@ using UnityEngine;
 
 namespace BlockBreaker.Player {
     public enum Powerup {
-        SLOW_BALL
+        MAGNET_BALL,
+        ONE_HIT_KILL
     }
 
     public class Paddle : MonoBehaviour
@@ -20,7 +21,8 @@ namespace BlockBreaker.Player {
         }
 
         private void ResetPowerups() {
-            activePowerups[Powerup.SLOW_BALL] = false;
+            activePowerups[Powerup.MAGNET_BALL] = false;
+            activePowerups[Powerup.ONE_HIT_KILL] = false;
         }
 
         public Dictionary<Powerup, bool> GetActivePowerups () { return activePowerups; }

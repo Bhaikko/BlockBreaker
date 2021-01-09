@@ -7,7 +7,7 @@ using BlockBreaker.Player;
 namespace BlockBreaker.Environment {
     public class Pickup : MonoBehaviour
     {
-        [SerializeField] Powerup powerupType = Powerup.SLOW_BALL;
+        [SerializeField] Powerup powerupType = Powerup.MAGNET_BALL;
 
         [SerializeField] float dropSpeed = 1.0f;
         [SerializeField] float duration = 2.0f;

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using BlockBreaker.Core;
+using BlockBreaker.Player;
 using BlockBreaker.UI;
 
 namespace BlockBreaker.Environment {
@@ -23,6 +24,8 @@ namespace BlockBreaker.Environment {
         SpriteRenderer spriteRenderer;
         PickupHandler pickupHandler;
 
+        Paddle paddle;
+
         // State variables
         int timesHit = 0; 
 
@@ -33,6 +36,8 @@ namespace BlockBreaker.Environment {
             gameStatus = FindObjectOfType<GameStatus>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             pickupHandler = GetComponent<PickupHandler>();
+
+            paddle = FindObjectOfType<Paddle>();
 
             spriteRenderer.sprite = hitSprites[timesHit];
         }
@@ -48,6 +53,13 @@ namespace BlockBreaker.Environment {
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
+            Dictionary<Powerup, bool> activePowerups = paddle.GetActivePowerups();
+
+            if (activePowerups[Powerup.ONE_HIT_KILL]) {
+                DestroyBlock();
+                return;
+            }
+
             if (!isBreakable) {
                 return;
             }
@@ -84,7 +96,10 @@ namespace BlockBreaker.Environment {
             // gameObject refers to this game object
             Destroy(gameObject);
             TriggerSparkesVFX();
-            gameMode.BLockDestroyed();
+
+            if (isBreakable) {
+                gameMode.BLockDestroyed();
+            }
         }
 
         private void TriggerSparkesVFX()
