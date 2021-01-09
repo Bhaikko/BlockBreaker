@@ -20,7 +20,6 @@ namespace BlockBreaker.Environment {
         private void OnTriggerEnter2D(Collider2D collision) {
             Paddle paddle = collision.gameObject.GetComponent<Paddle>();
 
-            Debug.Log("IN");
             if (paddle) {
                 paddle.ActivatePowerup(powerupType, duration);
                 Destroy(gameObject);

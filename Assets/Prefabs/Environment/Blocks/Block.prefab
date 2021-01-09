@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1415862246233385292}
   - component: {fileID: -1759223836851029518}
   - component: {fileID: 7412941774267441328}
+  - component: {fileID: 878268423472302172}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -237,3 +238,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd080a73089a0843b3b27d135f3f529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &878268423472302172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580104796324127865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a856e01d59ec7d641955b9105ce3e139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupPrefabs:
+  - {fileID: 749633919529412722, guid: fbbd5c1406cc05a49bba91944568f1e0, type: 3}
+  isRandomised: 1
+  specificPickup: {fileID: 749633919529412722, guid: fbbd5c1406cc05a49bba91944568f1e0,
+    type: 3}
+  probabilityOfSpawningPickup: 0.25

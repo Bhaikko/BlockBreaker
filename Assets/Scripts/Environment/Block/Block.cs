@@ -21,6 +21,7 @@ namespace BlockBreaker.Environment {
         GameMode gameMode;
         GameStatus gameStatus;
         SpriteRenderer spriteRenderer;
+        PickupHandler pickupHandler;
 
         // State variables
         int timesHit = 0; 
@@ -31,6 +32,7 @@ namespace BlockBreaker.Environment {
 
             gameStatus = FindObjectOfType<GameStatus>();
             spriteRenderer = GetComponent<SpriteRenderer>();
+            pickupHandler = GetComponent<PickupHandler>();
 
             spriteRenderer.sprite = hitSprites[timesHit];
         }
@@ -71,6 +73,13 @@ namespace BlockBreaker.Environment {
         {
             // gameStatus.AddToScore();
             AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
+
+            // Try Spawning A Pickup
+            if (pickupHandler) {
+                pickupHandler.TrySpawningPickup();
+            } else {
+                Debug.Log("Pickup Handler Not Attached.");
+            }
 
             // gameObject refers to this game object
             Destroy(gameObject);
