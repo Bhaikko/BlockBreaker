@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using BlockBreaker.Core;
+
 namespace BlockBreaker.Player {
     public enum Powerup {
         MAGNET_BALL,
         ONE_HIT_KILL,
-        INCREASE_BALL_SIZE
+        INCREASE_BALL_SIZE,
+        ADD_THREE_BALLS
     }
 
     public class Paddle : MonoBehaviour
@@ -16,10 +19,12 @@ namespace BlockBreaker.Player {
         Dictionary<Powerup, bool> activePowerups = null;
 
         Ball ball = null;
+        GameMode gameMode = null;
 
         private void Start() {
             activePowerups = new Dictionary<Powerup, bool>();
 
+            gameMode = FindObjectOfType<GameMode>();
             ball = FindObjectOfType<Ball>();
 
             ResetPowerups();
@@ -29,6 +34,7 @@ namespace BlockBreaker.Player {
             activePowerups[Powerup.MAGNET_BALL] = false;
             activePowerups[Powerup.ONE_HIT_KILL] = false;
             activePowerups[Powerup.INCREASE_BALL_SIZE] = false;
+            activePowerups[Powerup.ADD_THREE_BALLS] = false;
         }
 
         public Dictionary<Powerup, bool> GetActivePowerups () { return activePowerups; }
@@ -37,6 +43,13 @@ namespace BlockBreaker.Player {
             switch (powerup) {
                 case Powerup.INCREASE_BALL_SIZE:
                     ball.ChangeBallSize(2.0f);
+                    break;
+
+                case Powerup.ADD_THREE_BALLS:
+                    for (int i = 1; i <= 2; i++) {
+                        gameMode.SpawnBall();
+                    }
+
                     break;
 
                 default:
