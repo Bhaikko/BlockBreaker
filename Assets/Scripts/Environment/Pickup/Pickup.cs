@@ -25,5 +25,6 @@ namespace BlockBreaker.Environment {
                 Destroy(gameObject);
             }
         }
+        
     }
 }
