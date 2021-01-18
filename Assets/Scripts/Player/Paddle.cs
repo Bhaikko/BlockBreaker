@@ -13,6 +13,10 @@ namespace BlockBreaker.Player {
         void Start() {
             gameMode = FindObjectOfType<GameMode>();
         }
+
+        public void ChangeSize(float sizeX = 1.0f) {
+            transform.localScale = new Vector2(sizeX, 1.0f);
+        }
     }
 
 }
