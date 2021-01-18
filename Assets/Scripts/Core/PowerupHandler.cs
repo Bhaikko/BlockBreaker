@@ -10,7 +10,8 @@ namespace BlockBreaker.Core {
         ONE_HIT_KILL,
         INCREASE_BALL_SIZE,
         ADD_THREE_BALLS,
-        WIDEN_PADDLE
+        WIDEN_PADDLE,
+        NARROW_PADDLE
     }
 
     public class PowerupHandler : MonoBehaviour
@@ -36,6 +37,7 @@ namespace BlockBreaker.Core {
             activePowerups[Powerup.INCREASE_BALL_SIZE] = false;
             activePowerups[Powerup.ADD_THREE_BALLS] = false;
             activePowerups[Powerup.WIDEN_PADDLE] = false;
+            activePowerups[Powerup.NARROW_PADDLE] = false;
         }
 
         public Dictionary<Powerup, bool> GetActivePowerups () { return activePowerups; }
@@ -59,6 +61,10 @@ namespace BlockBreaker.Core {
                     FindObjectOfType<Paddle>().ChangeSize(2.0f);
                     break;
 
+                case Powerup.NARROW_PADDLE:
+                    FindObjectOfType<Paddle>().ChangeSize(0.5f);
+                    break;
+
                 default:
                     break;
 
@@ -74,6 +80,10 @@ namespace BlockBreaker.Core {
                     break;
 
                 case Powerup.WIDEN_PADDLE:
+                    FindObjectOfType<Paddle>().ChangeSize();
+                    break;
+
+                case Powerup.NARROW_PADDLE:
                     FindObjectOfType<Paddle>().ChangeSize();
                     break;
 

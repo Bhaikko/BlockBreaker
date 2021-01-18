@@ -72,6 +72,10 @@ namespace BlockBreaker.Environment {
 
         }
 
+        private void OnTriggerEnter2D(Collider2D collider) {
+            
+        }
+
         private void ShowNextHitSprite()
         {
             int spriteIndex = timesHit;
