@@ -8,9 +8,11 @@ using BlockBreaker.Player;
 namespace BlockBreaker.Environment {
     public class LoseCollider : MonoBehaviour
     {
+
+        
         private void OnTriggerEnter2D(Collider2D collision) {
             if (collision.gameObject.GetComponent<Ball>()) {
-                SceneManager.LoadScene("Game Over"); 
+                // SceneManager.LoadScene("Game Over"); 
             }
             
             // Better Gameover Handle

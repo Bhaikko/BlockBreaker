@@ -41,7 +41,9 @@ namespace BlockBreaker.Core {
         private void ActivateSpecificPowerup(Powerup powerup) {
             switch (powerup) {
                 case Powerup.INCREASE_BALL_SIZE:
-                    ball.ChangeBallSize(2.0f);
+                    for (int i = 0; i < gameMode.GetBalls().Count; i++) {
+                        gameMode.GetBalls()[i].ChangeBallSize(2.0f);
+                    }
                     break;
 
                 case Powerup.ADD_THREE_BALLS:
@@ -60,7 +62,9 @@ namespace BlockBreaker.Core {
         private void DeactivateSpecificPowerup(Powerup powerup) {
             switch (powerup) {
                 case Powerup.INCREASE_BALL_SIZE:
-                    ball.ChangeBallSize();
+                    for (int i = 0; i < gameMode.GetBalls().Count; i++) {
+                        gameMode.GetBalls()[i].ChangeBallSize();
+                    }
                     break;
 
                 default:

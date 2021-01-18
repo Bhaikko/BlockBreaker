@@ -27,6 +27,7 @@ namespace BlockBreaker.Player {
         PowerupHandler powerupHandler;
 
         Paddle paddle;
+        GameMode gameMode;
 
         // Start is called before the first frame update
         void Start()
@@ -37,21 +38,26 @@ namespace BlockBreaker.Player {
             powerupHandler = FindObjectOfType<PowerupHandler>();
 
             paddle = FindObjectOfType<Paddle>();
+            gameMode = FindObjectOfType<GameMode>();
 
             paddleToBallVector = this.transform.position - paddle.transform.position;
 
             launchVelocity = new Vector2(xVelocity, yVelocity);
             launchSpeed = launchVelocity.magnitude;
             launchVelocity.Normalize();
+
+            if (gameMode.hasStarted) {
+                rigidBody2D.velocity = launchVelocity * launchSpeed;
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (!hasStarted) {
+            if (!gameMode.hasStarted) {
                 LockBallToPaddle();
                 LaunchOnMouseClick();
-            }
+            } 
         }
 
         private void LockBallToPaddle()
@@ -64,7 +70,7 @@ namespace BlockBreaker.Player {
         private void LaunchOnMouseClick()
         {
             if (Input.GetMouseButtonDown(0)) {
-                hasStarted = true;
+                gameMode.hasStarted = true;
                 
                 rigidBody2D.velocity = launchVelocity * launchSpeed; 
             }
@@ -83,7 +89,7 @@ namespace BlockBreaker.Player {
                 Random.Range(0, randomFactor)    
             );
 
-            if (hasStarted) {
+            if (gameMode.hasStarted) {
                 AudioClip clip = ballSounds[Random.Range(0, ballSounds.Length)];
                 audioSource.PlayOneShot(clip);
 
@@ -110,8 +116,9 @@ namespace BlockBreaker.Player {
                     launchVelocity = collision.contacts[0].normal;
                 }
 
-                hasStarted = false;
+                gameMode.hasStarted = false;
             }
         }
+
     }
 }
