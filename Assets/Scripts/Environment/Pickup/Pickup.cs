@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using BlockBreaker.Core;
 using BlockBreaker.Player;
 
 namespace BlockBreaker.Environment {
@@ -9,8 +10,14 @@ namespace BlockBreaker.Environment {
     {
         [SerializeField] Powerup powerupType = Powerup.MAGNET_BALL;
 
+        PowerupHandler powerupHandler;
+
         [SerializeField] float dropSpeed = 1.0f;
         [SerializeField] float duration = 2.0f;
+
+        void Start() {
+            powerupHandler = FindObjectOfType<PowerupHandler>();
+        }
 
         void Update()
         {
@@ -21,7 +28,7 @@ namespace BlockBreaker.Environment {
             Paddle paddle = collision.gameObject.GetComponent<Paddle>();
 
             if (paddle) {
-                paddle.ActivatePowerup(powerupType, duration);
+                powerupHandler.ActivatePowerup(powerupType, duration);
                 Destroy(gameObject);
             }
         }

@@ -11,6 +11,9 @@ namespace BlockBreaker.Core {
         [SerializeField]
         Ball ballPrefab;
 
+        [SerializeField]
+        Paddle paddlePrefab;
+
         int blocksLeft = 0;
 
         private SceneLoader sceneLoader;

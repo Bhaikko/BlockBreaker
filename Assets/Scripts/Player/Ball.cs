@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using BlockBreaker.Core;
+
 namespace BlockBreaker.Player {
 
     public class Ball : MonoBehaviour
@@ -22,6 +24,8 @@ namespace BlockBreaker.Player {
         // Cached Component References
         AudioSource audioSource;
         Rigidbody2D rigidBody2D;
+        PowerupHandler powerupHandler;
+
         Paddle paddle;
 
         // Start is called before the first frame update
@@ -29,6 +33,8 @@ namespace BlockBreaker.Player {
         {
             audioSource = GetComponent<AudioSource>();
             rigidBody2D = GetComponent<Rigidbody2D>();
+
+            powerupHandler = FindObjectOfType<PowerupHandler>();
 
             paddle = FindObjectOfType<Paddle>();
 
@@ -91,7 +97,7 @@ namespace BlockBreaker.Player {
         }
 
         private void CheckForPowerUps(Collision2D collision) {
-            Dictionary<Powerup, bool> activePowerups = paddle.GetActivePowerups();
+            Dictionary<Powerup, bool> activePowerups = powerupHandler.GetActivePowerups();
 
             if (activePowerups[Powerup.MAGNET_BALL]) {
                 launchSpeed = rigidBody2D.velocity.magnitude;
