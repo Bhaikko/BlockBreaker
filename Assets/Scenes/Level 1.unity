@@ -305,7 +305,7 @@ PrefabInstance:
         type: 3}
       propertyPath: specificPickup
       value: 
-      objectReference: {fileID: 133691607489683264, guid: 30b83f6f2fe8f9b4cb6dba07cb0f09d4,
+      objectReference: {fileID: 4248471318874816114, guid: b966b4e685ebf244cbe47a0451e2ea4a,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b57fe964aa918834b94928af47e499b1, type: 3}
@@ -479,7 +479,7 @@ PrefabInstance:
         type: 3}
       propertyPath: specificPickup
       value: 
-      objectReference: {fileID: 133691607489683264, guid: 30b83f6f2fe8f9b4cb6dba07cb0f09d4,
+      objectReference: {fileID: 4248471318874816114, guid: b966b4e685ebf244cbe47a0451e2ea4a,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b57fe964aa918834b94928af47e499b1, type: 3}
@@ -706,7 +706,7 @@ PrefabInstance:
         type: 3}
       propertyPath: specificPickup
       value: 
-      objectReference: {fileID: 133691607489683264, guid: 30b83f6f2fe8f9b4cb6dba07cb0f09d4,
+      objectReference: {fileID: 4248471318874816114, guid: b966b4e685ebf244cbe47a0451e2ea4a,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b57fe964aa918834b94928af47e499b1, type: 3}
@@ -937,7 +937,7 @@ PrefabInstance:
         type: 3}
       propertyPath: specificPickup
       value: 
-      objectReference: {fileID: 133691607489683264, guid: 30b83f6f2fe8f9b4cb6dba07cb0f09d4,
+      objectReference: {fileID: 4248471318874816114, guid: b966b4e685ebf244cbe47a0451e2ea4a,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b57fe964aa918834b94928af47e499b1, type: 3}

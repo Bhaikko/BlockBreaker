@@ -5,6 +5,7 @@ using UnityEngine;
 
 using BlockBreaker.Core;
 using BlockBreaker.UI;
+using BlockBreaker.Player;
 
 namespace BlockBreaker.Environment {
     public class Block : MonoBehaviour
@@ -52,6 +53,18 @@ namespace BlockBreaker.Environment {
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
+            if (collision.gameObject.GetComponent<Ball>()) {
+                HandleBlockCollision();
+            } 
+        }
+
+        private void OnTriggerEnter2D(Collider2D collider) {
+            if (collider.gameObject.GetComponent<Ball>()) { 
+                HandleBlockCollision();
+            }
+        }
+
+        private void HandleBlockCollision() {
             Dictionary<Powerup, bool> activePowerups = powerupHandler.GetActivePowerups();
 
             if (activePowerups[Powerup.ONE_HIT_KILL]) {
@@ -69,11 +82,6 @@ namespace BlockBreaker.Environment {
             } else {
                 ShowNextHitSprite();
             }
-
-        }
-
-        private void OnTriggerEnter2D(Collider2D collider) {
-            
         }
 
         private void ShowNextHitSprite()

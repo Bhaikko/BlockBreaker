@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using BlockBreaker.Player;
+using BlockBreaker.Environment;
 
 namespace BlockBreaker.Core {
     public enum Powerup {
@@ -11,7 +12,8 @@ namespace BlockBreaker.Core {
         INCREASE_BALL_SIZE,
         ADD_THREE_BALLS,
         WIDEN_PADDLE,
-        NARROW_PADDLE
+        NARROW_PADDLE,
+        PENETRATING_BALL
     }
 
     public class PowerupHandler : MonoBehaviour
@@ -38,6 +40,7 @@ namespace BlockBreaker.Core {
             activePowerups[Powerup.ADD_THREE_BALLS] = false;
             activePowerups[Powerup.WIDEN_PADDLE] = false;
             activePowerups[Powerup.NARROW_PADDLE] = false;
+            activePowerups[Powerup.PENETRATING_BALL] = false;
         }
 
         public Dictionary<Powerup, bool> GetActivePowerups () { return activePowerups; }
@@ -65,6 +68,12 @@ namespace BlockBreaker.Core {
                     FindObjectOfType<Paddle>().ChangeSize(0.5f);
                     break;
 
+                case Powerup.PENETRATING_BALL:
+                    foreach (Block block in  FindObjectsOfType<Block>()) {
+                        block.GetComponent<BoxCollider2D>().isTrigger = true;
+                    }
+                    break;
+
                 default:
                     break;
 
@@ -85,6 +94,12 @@ namespace BlockBreaker.Core {
 
                 case Powerup.NARROW_PADDLE:
                     FindObjectOfType<Paddle>().ChangeSize();
+                    break;
+
+                case Powerup.PENETRATING_BALL:
+                    foreach (Block block in  FindObjectsOfType<Block>()) {
+                        block.GetComponent<BoxCollider2D>().isTrigger = false;
+                    }
                     break;
 
                 default:

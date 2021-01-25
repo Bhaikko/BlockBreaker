@@ -134,9 +134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3222f069fc8283448575c6bff98f845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddle: {fileID: 0}
   xVelocity: 2
   yVelocity: 15
+  randomFactor: 0.5
   ballSounds:
   - {fileID: 8300000, guid: 82c7d4462796e5d439d710acfba43e5c, type: 3}
   - {fileID: 8300000, guid: f1c7ad8c063437b4e9b4c16f1c02f7cb, type: 3}
