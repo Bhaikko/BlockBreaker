@@ -104,7 +104,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: fa415846450bb4f419e2d4efd70702a6, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &4593083553782670609
 CircleCollider2D:

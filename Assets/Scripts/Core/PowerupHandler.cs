@@ -13,7 +13,8 @@ namespace BlockBreaker.Core {
         ADD_THREE_BALLS,
         WIDEN_PADDLE,
         NARROW_PADDLE,
-        PENETRATING_BALL
+        PENETRATING_BALL,
+        FAST_BALL
     }
 
     public class PowerupHandler : MonoBehaviour
@@ -41,6 +42,7 @@ namespace BlockBreaker.Core {
             activePowerups[Powerup.WIDEN_PADDLE] = false;
             activePowerups[Powerup.NARROW_PADDLE] = false;
             activePowerups[Powerup.PENETRATING_BALL] = false;
+            activePowerups[Powerup.FAST_BALL] = false;
         }
 
         public Dictionary<Powerup, bool> GetActivePowerups () { return activePowerups; }
@@ -72,6 +74,10 @@ namespace BlockBreaker.Core {
                     foreach (Block block in  FindObjectsOfType<Block>()) {
                         block.GetComponent<BoxCollider2D>().isTrigger = true;
                     }
+                    break;
+
+                case Powerup.FAST_BALL:
+                    FindObjectOfType<Ball>().IncreaseBallSpeed(1.25f);
                     break;
 
                 default:

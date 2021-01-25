@@ -102,6 +102,10 @@ namespace BlockBreaker.Player {
             transform.localScale = new Vector3(size, size, size);
         }
 
+        public void IncreaseBallSpeed(float multiplier) {
+            rigidBody2D.velocity *= multiplier;
+        }
+
         private void CheckForPowerUps(Collision2D collision) {
             Dictionary<Powerup, bool> activePowerups = powerupHandler.GetActivePowerups();
 
