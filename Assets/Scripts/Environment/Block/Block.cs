@@ -6,10 +6,13 @@ using UnityEngine;
 using BlockBreaker.Core;
 using BlockBreaker.UI;
 using BlockBreaker.Player;
+using System.Linq;
 
 namespace BlockBreaker.Environment {
     public class Block : MonoBehaviour
     {
+        [SerializeField] BlockType blockType = BlockType.DEFAULT;
+
         // configuration parameters
         [SerializeField] AudioClip breakSound = null;
         [SerializeField] GameObject blockSparkles = null;
@@ -55,6 +58,7 @@ namespace BlockBreaker.Environment {
         {
             if (collision.gameObject.GetComponent<Ball>()) {
                 HandleBlockCollision();
+
             } 
         }
 
@@ -70,14 +74,20 @@ namespace BlockBreaker.Environment {
         public void HandleBlockCollision() {
             Dictionary<Powerup, bool> activePowerups = powerupHandler.GetActivePowerups();
 
+            if (blockType == BlockType.EXPLOSION) {
+                HandleExplosionBlock();
+            }
+
             if (activePowerups[Powerup.ONE_HIT_KILL]) {
                 DestroyBlock();
                 return;
             }
 
+
             if (!isBreakable) {
                 return;
             }
+            
 
             timesHit++;
             if (timesHit >= health) {
@@ -107,6 +117,8 @@ namespace BlockBreaker.Environment {
                 Debug.Log("Pickup Handler Not Attached.");
             }
 
+            gameMode.RemoveBlockMapping(transform.position.ToString());
+
             // gameObject refers to this game object
             Destroy(gameObject);
             TriggerSparkesVFX();
@@ -118,8 +130,28 @@ namespace BlockBreaker.Environment {
 
         private void TriggerSparkesVFX()
         {
-            GameObject sparkles = Instantiate(blockSparkles, transform.position, transform.rotation);    // Used to Instantiate gameObject runtime
+            GameObject sparkles = Instantiate(blockSparkles, transform.position, transform.rotation);
             Destroy(sparkles, 2.0f);
+        }
+
+        private void HandleExplosionBlock() {
+            Vector3 currentPos = transform.position;
+
+            for (int x = -1; x <= 1; x++) {
+                for (int y = -1; y <= 1; y++) {
+                    if (x == 0 && y == 0) {
+                        continue;
+                    }
+                    Vector3 newVector = currentPos + new Vector3(x, y, 0.0f);
+                    if (gameMode.GetBlockMapping().ContainsKey(newVector.ToString())) {
+                        gameMode.GetBlockMapping()[newVector.ToString()].DestroyBlock();
+                    }
+                }
+            }
+        }
+
+        private void HandlerLineClear() {
+
         }
     }
 

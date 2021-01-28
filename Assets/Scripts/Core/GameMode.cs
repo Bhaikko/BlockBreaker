@@ -5,6 +5,8 @@ using UnityEngine;
 using BlockBreaker.SceneManagement;
 using BlockBreaker.Player;
 using System;
+using BlockBreaker.Environment;
+using System.Linq;
 
 namespace BlockBreaker.Core {
     public class GameMode : MonoBehaviour
@@ -26,6 +28,8 @@ namespace BlockBreaker.Core {
 
         public bool hasStarted = false;
 
+        Dictionary<string, Block> blocksMapping = new Dictionary<string, Block>();
+
         void Start()
         {
             screenWidth = 2.625f * Camera.main.orthographicSize;
@@ -45,6 +49,7 @@ namespace BlockBreaker.Core {
         void StartGame() {
             SpawnPaddle();
             SpawnBall();
+            RegisterBlocks();
         }
 
         private void SpawnPaddle()
@@ -77,6 +82,21 @@ namespace BlockBreaker.Core {
             return balls;
         }
 
+        private void RegisterBlocks() {
+            Block[] blocks = FindObjectsOfType<Block>();
 
+            foreach (Block block in blocks) {
+                string key = block.transform.position.ToString();
+                blocksMapping[key] = block;
+            }
+        }
+
+        public Dictionary<string, Block> GetBlockMapping() {
+            return blocksMapping;
+        }
+
+        public void RemoveBlockMapping(string key) {
+            blocksMapping.Remove(key);
+        }
     }
 }
