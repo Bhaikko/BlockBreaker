@@ -95,6 +95,10 @@ namespace BlockBreaker.Core {
                     FindObjectOfType<LoseCollider>().ActivateShield();
                     break;
 
+                case Powerup.LASER:
+                    FindObjectOfType<Paddle>().ActivateLasers();
+                    break;
+
                 default:
                     break;
 
@@ -129,6 +133,9 @@ namespace BlockBreaker.Core {
                     }
                     break;
 
+                case Powerup.LASER:
+                    FindObjectOfType<Paddle>().DeactivateLasers();
+                    break;
 
                 default:
                     break;

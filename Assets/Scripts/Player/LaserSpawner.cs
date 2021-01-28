@@ -9,8 +9,14 @@ namespace BlockBreaker.Player {
         [SerializeField] Laser laserPrefab = null;
         [SerializeField] float rateOfFire = 0.5f;
 
-        public void Start() {
-            StartCoroutine(Shoot());
+        private Coroutine shootCoroutine = null;
+
+        public void StartShooting() {
+            shootCoroutine = StartCoroutine(Shoot());
+        }
+
+        public void StopShooting() {
+            StopCoroutine(shootCoroutine);
         }
 
         private IEnumerator Shoot() {

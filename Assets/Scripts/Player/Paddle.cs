@@ -10,13 +10,34 @@ namespace BlockBreaker.Player {
     {
         GameMode gameMode;
 
+        [SerializeField] LaserSpawner[] spawners;
+
         void Start() {
             gameMode = FindObjectOfType<GameMode>();
+
+            foreach (LaserSpawner spawner in spawners) {
+                spawner.gameObject.SetActive(false);
+            }
         }
 
         public void ChangeSize(float sizeX = 1.0f) {
             transform.localScale = new Vector2(sizeX, 1.0f);
         }
+
+        public void ActivateLasers() {
+            foreach (LaserSpawner spawner in spawners) {
+                spawner.gameObject.SetActive(true);
+                spawner.StartShooting();
+            }
+        }
+
+        public void DeactivateLasers() {
+            foreach (LaserSpawner spawner in spawners) {
+                spawner.gameObject.SetActive(false);
+                spawner.StopShooting();
+            }
+        }
+
     }
 
 }
