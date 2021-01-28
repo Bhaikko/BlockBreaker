@@ -16,7 +16,8 @@ namespace BlockBreaker.Core {
         PENETRATING_BALL,
         FAST_BALL,
         DECREASE_BALL_SIZE,
-        SHIELD
+        SHIELD,
+        LASER
     }
 
     public class PowerupHandler : MonoBehaviour

@@ -59,12 +59,15 @@ namespace BlockBreaker.Environment {
         }
 
         private void OnTriggerEnter2D(Collider2D collider) {
-            if (collider.gameObject.GetComponent<Ball>()) { 
+            if (
+                collider.gameObject.GetComponent<Ball>() || 
+                collider.gameObject.GetComponent<Laser>()
+            ) { 
                 HandleBlockCollision();
             }
         }
 
-        private void HandleBlockCollision() {
+        public void HandleBlockCollision() {
             Dictionary<Powerup, bool> activePowerups = powerupHandler.GetActivePowerups();
 
             if (activePowerups[Powerup.ONE_HIT_KILL]) {
