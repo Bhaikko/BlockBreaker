@@ -76,6 +76,9 @@ namespace BlockBreaker.Environment {
 
             if (blockType == BlockType.EXPLOSION) {
                 HandleExplosionBlock();
+            } else if (blockType == BlockType.LINE_CLEAR) {
+                Debug.Log("Clearing Line");
+                HandlerLineClear();
             }
 
             if (activePowerups[Powerup.ONE_HIT_KILL]) {
@@ -151,7 +154,24 @@ namespace BlockBreaker.Environment {
         }
 
         private void HandlerLineClear() {
+            Vector3 currentPos = transform.position;
 
+            DestroyInDirection(currentPos, 1.0f, 0.0f);
+            DestroyInDirection(currentPos, -1.0f, 0.0f);
+
+        }
+
+        private void DestroyInDirection(Vector3 currentPos, float directionX = 0.0f, float directionY = 0.0f) {
+            Vector3 newVector = currentPos;
+            while (true) {
+                newVector = newVector + new Vector3(directionX, directionY, 0.0f);
+
+                if (gameMode.GetBlockMapping().ContainsKey(newVector.ToString())) {
+                    gameMode.GetBlockMapping()[newVector.ToString()].DestroyBlock();
+                } else {
+                    break;
+                }
+            }
         }
     }
 
