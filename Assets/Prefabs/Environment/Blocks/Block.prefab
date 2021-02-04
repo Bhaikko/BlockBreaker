@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbd3f6518c9dd4c488f0dd097bf1c268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockType: 0
   breakSound: {fileID: 8300000, guid: 8c65838454dec244bb14a832bbbffae6, type: 3}
   blockSparkles: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
   isBreakable: 1
@@ -251,9 +252,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupPrefabs:
+  - {fileID: 5925026143199225773, guid: 570a0df9c41b8bf449a27684a07dca7d, type: 3}
+  - {fileID: 133691607489683264, guid: 75d541ae2af93b443b3df15de902ee2a, type: 3}
+  - {fileID: 133691607489683264, guid: 30b83f6f2fe8f9b4cb6dba07cb0f09d4, type: 3}
+  - {fileID: 2625483049749163350, guid: a96ec5a4849ba9d4f9637e9e97183fe5, type: 3}
+  - {fileID: 133691607489683264, guid: 9ad9d35bb9019344d986d79f2d2d551a, type: 3}
   - {fileID: 2719266708218872598, guid: 951811bd2433a8b48ab81411eae373e6, type: 3}
+  - {fileID: 4248471318874816114, guid: b966b4e685ebf244cbe47a0451e2ea4a, type: 3}
   - {fileID: 2625483049749163350, guid: 9cc2a03360bb45a4fa98413590990e86, type: 3}
-  isRandomised: 0
+  - {fileID: 3260885019995071831, guid: 889fe40598596704ca51f30a724031a9, type: 3}
+  - {fileID: 7655069391120091546, guid: 457513e2c8631e44facc59344b69b328, type: 3}
+  - {fileID: 133691607489683264, guid: 3d9d467a274d7de46a3da7993fe7481a, type: 3}
+  isRandomised: 1
   specificPickup: {fileID: 2625483049749163350, guid: 9cc2a03360bb45a4fa98413590990e86,
     type: 3}
   probabilityOfSpawningPickup: 0.25
