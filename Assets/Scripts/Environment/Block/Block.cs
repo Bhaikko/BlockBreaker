@@ -159,6 +159,8 @@ namespace BlockBreaker.Environment {
             DestroyInDirection(currentPos, 1.0f, 0.0f);
             DestroyInDirection(currentPos, -1.0f, 0.0f);
 
+            DestroyBlock();
+
         }
 
         private void DestroyInDirection(Vector3 currentPos, float directionX = 0.0f, float directionY = 0.0f) {
