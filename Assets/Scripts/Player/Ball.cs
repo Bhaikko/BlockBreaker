@@ -19,7 +19,6 @@ namespace BlockBreaker.Player {
         Vector2 paddleToBallVector = new Vector2();
         Vector2 launchVelocity = new Vector2();
         float launchSpeed = 0.0f;
-        bool hasStarted = false;
 
         // Cached Component References
         AudioSource audioSource;

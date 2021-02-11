@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 using BlockBreaker.Player;
+using BlockBreaker.Core;
 
 namespace BlockBreaker.Environment {
     public class LoseCollider : MonoBehaviour
@@ -14,7 +15,11 @@ namespace BlockBreaker.Environment {
 
         private void OnTriggerEnter2D(Collider2D collision) {
             if (collision.gameObject.GetComponent<Ball>()) {
-                SceneManager.LoadScene("Game Over"); 
+                if (FindObjectOfType<GameMode>().GetBalls().Count <= 1) {
+                    SceneManager.LoadScene("Game Over"); 
+                }
+                
+                Destroy(collision.gameObject);
             }
             
             // Better Gameover Handle
