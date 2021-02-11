@@ -681,6 +681,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1479182453}
     m_Modifications:
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: isRandomised
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: specificPickup
+      value: 
+      objectReference: {fileID: 7655069391120091546, guid: 457513e2c8631e44facc59344b69b328,
+        type: 3}
     - target: {fileID: 3639868941205784364, guid: fd33b147a8e78394281271aef87c5bfb,
         type: 3}
       propertyPath: m_Name
@@ -831,6 +842,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1479182453}
     m_Modifications:
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: isRandomised
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: specificPickup
+      value: 
+      objectReference: {fileID: 2625483049749163350, guid: a96ec5a4849ba9d4f9637e9e97183fe5,
+        type: 3}
     - target: {fileID: 3639868941205784364, guid: fd33b147a8e78394281271aef87c5bfb,
         type: 3}
       propertyPath: m_Name
@@ -1809,6 +1831,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 973779224}
     m_Modifications:
+    - target: {fileID: 996678911992095117, guid: 028626055138ba4428e411474260bd73,
+        type: 3}
+      propertyPath: isRandomised
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 996678911992095117, guid: 028626055138ba4428e411474260bd73,
+        type: 3}
+      propertyPath: specificPickup
+      value: 
+      objectReference: {fileID: 133691607489683264, guid: 75d541ae2af93b443b3df15de902ee2a,
+        type: 3}
     - target: {fileID: 2461931804337458600, guid: 028626055138ba4428e411474260bd73,
         type: 3}
       propertyPath: m_Name
@@ -2259,6 +2292,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 973779224}
     m_Modifications:
+    - target: {fileID: 996678911992095117, guid: 028626055138ba4428e411474260bd73,
+        type: 3}
+      propertyPath: isRandomised
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 996678911992095117, guid: 028626055138ba4428e411474260bd73,
+        type: 3}
+      propertyPath: specificPickup
+      value: 
+      objectReference: {fileID: 133691607489683264, guid: 3d9d467a274d7de46a3da7993fe7481a,
+        type: 3}
     - target: {fileID: 2461931804337458600, guid: 028626055138ba4428e411474260bd73,
         type: 3}
       propertyPath: m_Name
@@ -2682,6 +2726,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1479182453}
     m_Modifications:
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: isRandomised
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: specificPickup
+      value: 
+      objectReference: {fileID: 133691607489683264, guid: 9ad9d35bb9019344d986d79f2d2d551a,
+        type: 3}
     - target: {fileID: 3639868941205784364, guid: fd33b147a8e78394281271aef87c5bfb,
         type: 3}
       propertyPath: m_Name
@@ -2757,6 +2812,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1479182453}
     m_Modifications:
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: isRandomised
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3639868941205784364, guid: fd33b147a8e78394281271aef87c5bfb,
         type: 3}
       propertyPath: m_Name
@@ -3342,6 +3402,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7087390886742962772, guid: b57fe964aa918834b94928af47e499b1,
+        type: 3}
+      propertyPath: isRandomised
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087390886742962772, guid: b57fe964aa918834b94928af47e499b1,
+        type: 3}
+      propertyPath: specificPickup
+      value: 
+      objectReference: {fileID: 133691607489683264, guid: 9ad9d35bb9019344d986d79f2d2d551a,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b57fe964aa918834b94928af47e499b1, type: 3}
 --- !u!4 &1241749899 stripped
@@ -3582,6 +3653,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1479182453}
     m_Modifications:
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: isRandomised
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: specificPickup
+      value: 
+      objectReference: {fileID: 3260885019995071831, guid: 889fe40598596704ca51f30a724031a9,
+        type: 3}
     - target: {fileID: 3639868941205784364, guid: fd33b147a8e78394281271aef87c5bfb,
         type: 3}
       propertyPath: m_Name
@@ -3938,6 +4020,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1479182453}
     m_Modifications:
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: isRandomised
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: specificPickup
+      value: 
+      objectReference: {fileID: 133691607489683264, guid: 30b83f6f2fe8f9b4cb6dba07cb0f09d4,
+        type: 3}
     - target: {fileID: 3639868941205784364, guid: fd33b147a8e78394281271aef87c5bfb,
         type: 3}
       propertyPath: m_Name
@@ -4540,6 +4633,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1479182453}
     m_Modifications:
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: isRandomised
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124865982448036617, guid: fd33b147a8e78394281271aef87c5bfb,
+        type: 3}
+      propertyPath: specificPickup
+      value: 
+      objectReference: {fileID: 4248471318874816114, guid: b966b4e685ebf244cbe47a0451e2ea4a,
+        type: 3}
     - target: {fileID: 3639868941205784364, guid: fd33b147a8e78394281271aef87c5bfb,
         type: 3}
       propertyPath: m_Name
@@ -4932,6 +5036,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7087390886742962772, guid: b57fe964aa918834b94928af47e499b1,
+        type: 3}
+      propertyPath: isRandomised
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087390886742962772, guid: b57fe964aa918834b94928af47e499b1,
+        type: 3}
+      propertyPath: specificPickup
+      value: 
+      objectReference: {fileID: 5925026143199225773, guid: 570a0df9c41b8bf449a27684a07dca7d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b57fe964aa918834b94928af47e499b1, type: 3}
 --- !u!4 &1994350073 stripped

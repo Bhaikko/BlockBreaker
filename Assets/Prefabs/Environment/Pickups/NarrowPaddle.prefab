@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 749633919529412722, guid: fbbd5c1406cc05a49bba91944568f1e0,
         type: 3}
+      propertyPath: duration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 749633919529412722, guid: fbbd5c1406cc05a49bba91944568f1e0,
+        type: 3}
       propertyPath: powerupType
       value: 5
       objectReference: {fileID: 0}

@@ -1,58 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1246712183079969621
+--- !u!1001 &7956528000749926920
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -1759223836851029518, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
+    - target: {fileID: 2580104796324127844, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
-      propertyPath: health
-      value: 3
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.28
       objectReference: {fileID: 0}
-    - target: {fileID: -1759223836851029518, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
+    - target: {fileID: 2580104796324127844, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
-      propertyPath: hitSprites.Array.size
-      value: 3
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.28
       objectReference: {fileID: 0}
-    - target: {fileID: -1759223836851029518, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
+    - target: {fileID: 2580104796324127844, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
-      propertyPath: hitSprites.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 2563b42f82e8e294fbe899cf39f50e6d,
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580104796324127844, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
-    - target: {fileID: -1759223836851029518, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
-        type: 3}
-      propertyPath: hitSprites.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 0ac1b948cef6606449bcde96c64a22e3,
-        type: 3}
-    - target: {fileID: 878268423472302172, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
-        type: 3}
-      propertyPath: probabilityOfSpawningPickup
-      value: 0.2
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 2580104796324127865, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
       propertyPath: m_Name
-      value: 3 Hit Block
+      value: 1 Hit Circle
       objectReference: {fileID: 0}
     - target: {fileID: 2580104796324127866, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
+      propertyPath: m_Size.x
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580104796324127866, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580104796324127866, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8fe7fdad9754de345a59a5a8ecab02a3,
+        type: 3}
+    - target: {fileID: 2580104796324127866, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
+        type: 3}
       propertyPath: m_Color.b
-      value: 0.38412246
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2580104796324127866, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.4685888
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2580104796324127866, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.9811321
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2580104796324127867, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}

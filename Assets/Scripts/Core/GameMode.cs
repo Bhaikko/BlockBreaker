@@ -65,7 +65,7 @@ namespace BlockBreaker.Core {
         {
             blocksLeft--;
             if (blocksLeft <= 0) {
-                // sceneLoader.LoadNextScene();
+                sceneLoader.LoadNextScene();
             }
         }
 

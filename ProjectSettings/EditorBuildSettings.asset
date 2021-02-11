@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Menu.unity
     guid: 871ec6cf43f42574e92860b5ddc5cdc2
   - enabled: 1
-    path: Assets/Scenes/Test.unity
-    guid: f0dc20f1c1b9a7245a8aa1fee3ef0ccc
+    path: Assets/Scenes/Level 1 Default.unity
+    guid: 0d5e29095eb801e4ab76f30afd508c32
   - enabled: 1
-    path: Assets/Scenes/Level 2.unity
-    guid: 860e883bed38e9c4e9e925723fbf7d41
+    path: Assets/Scenes/Level 2 Phew Phew.unity
+    guid: efe465634cec5b14f8a909597fec6a80
+  - enabled: 1
+    path: Assets/Scenes/Level 3 Chaos.unity
+    guid: 40a8d16ef7667f04eba9b85ad4a47f80
+  - enabled: 1
+    path: Assets/Scenes/Level 4 Explosions.unity
+    guid: 52d22942fa6049e4cb8554d6f7675a2f
+  - enabled: 1
+    path: Assets/Scenes/Level 6 Boss Battle.unity
+    guid: 4f47360f0982259448d7493267366f98
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: 29ce78ee6b55c9246a4f0a02143112ab

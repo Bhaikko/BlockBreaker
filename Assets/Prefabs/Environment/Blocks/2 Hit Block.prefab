@@ -23,6 +23,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 0ac1b948cef6606449bcde96c64a22e3,
         type: 3}
+    - target: {fileID: 878268423472302172, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
+        type: 3}
+      propertyPath: probabilityOfSpawningPickup
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2580104796324127865, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
       propertyPath: m_Name

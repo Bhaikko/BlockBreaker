@@ -9,7 +9,7 @@ namespace BlockBreaker.Environment {
     public class LoseCollider : MonoBehaviour
     {
         private void OnCollisionEnter2D(Collision2D collider) {
-            // ActivateShield(false);
+            ActivateShield(false);
         }
 
         private void OnTriggerEnter2D(Collider2D collision) {

@@ -266,4 +266,4 @@ MonoBehaviour:
   isRandomised: 1
   specificPickup: {fileID: 2625483049749163350, guid: 9cc2a03360bb45a4fa98413590990e86,
     type: 3}
-  probabilityOfSpawningPickup: 0.25
+  probabilityOfSpawningPickup: 0.05
