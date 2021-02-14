@@ -36,10 +36,12 @@ namespace BlockBreaker.Player {
 
             powerupHandler = FindObjectOfType<PowerupHandler>();
 
-            paddle = FindObjectOfType<Paddle>();
             gameMode = FindObjectOfType<GameMode>();
+            paddle = gameMode.GetPaddle();
 
-            paddleToBallVector = this.transform.position - paddle.transform.position;
+            transform.position = paddle.transform.position + new Vector3(0.0f, 0.5f, 0.0f);
+
+            paddleToBallVector = transform.position - paddle.transform.position;
 
             launchVelocity = new Vector2(xVelocity, yVelocity);
             launchSpeed = launchVelocity.magnitude;

@@ -21,8 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 4 Explosions.unity
     guid: 52d22942fa6049e4cb8554d6f7675a2f
   - enabled: 1
-    path: Assets/Scenes/Level 6 Boss Battle.unity
-    guid: 4f47360f0982259448d7493267366f98
+    path: Assets/Scenes/Test.unity
+    guid: f0dc20f1c1b9a7245a8aa1fee3ef0ccc
+  - enabled: 1
+    path: Assets/Scenes/Test 1.unity
+    guid: 157a0192ce64a9e40aabcee01c44c940
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: 29ce78ee6b55c9246a4f0a02143112ab

@@ -4,9 +4,7 @@ using UnityEngine;
 
 using BlockBreaker.SceneManagement;
 using BlockBreaker.Player;
-using System;
 using BlockBreaker.Environment;
-using System.Linq;
 
 namespace BlockBreaker.Core {
     public class GameMode : MonoBehaviour
@@ -54,7 +52,7 @@ namespace BlockBreaker.Core {
 
         private void SpawnPaddle()
         {
-            Paddle paddle = Instantiate<Paddle>(paddlePrefab);
+            paddle = Instantiate<Paddle>(paddlePrefab);
             paddle.transform.position = new Vector2(
                 screenWidth / 2.0f,
                 0.25f
@@ -97,6 +95,10 @@ namespace BlockBreaker.Core {
 
         public void RemoveBlockMapping(string key) {
             blocksMapping.Remove(key);
+        }
+
+        public Paddle GetPaddle() {
+            return paddle;
         }
     }
 }
