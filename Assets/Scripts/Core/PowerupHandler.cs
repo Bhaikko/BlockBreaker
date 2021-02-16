@@ -55,8 +55,8 @@ namespace BlockBreaker.Core {
         private void ActivateSpecificPowerup(Powerup powerup) {
             switch (powerup) {
                 case Powerup.INCREASE_BALL_SIZE:
-                    for (int i = 0; i < gameMode.GetBalls().Count; i++) {
-                        gameMode.GetBalls()[i].ChangeBallSize(2.0f);
+                    foreach (Ball ball in FindObjectsOfType<Ball>()) {
+                        ball.ChangeBallSize(2.0f);
                     }
                     break;
 
@@ -86,8 +86,8 @@ namespace BlockBreaker.Core {
                     break;
 
                 case Powerup.DECREASE_BALL_SIZE:
-                    for (int i = 0; i < gameMode.GetBalls().Count; i++) {
-                        gameMode.GetBalls()[i].ChangeBallSize(0.5f);
+                    foreach (Ball ball in FindObjectsOfType<Ball>()) {
+                        ball.ChangeBallSize(0.5f);
                     }
                     break;
 
@@ -108,8 +108,8 @@ namespace BlockBreaker.Core {
         private void DeactivateSpecificPowerup(Powerup powerup) {
             switch (powerup) {
                 case Powerup.INCREASE_BALL_SIZE:
-                    for (int i = 0; i < gameMode.GetBalls().Count; i++) {
-                        gameMode.GetBalls()[i].ChangeBallSize();
+                    foreach (Ball ball in FindObjectsOfType<Ball>()) {
+                        ball.ChangeBallSize();
                     }
                     break;
 
@@ -128,8 +128,8 @@ namespace BlockBreaker.Core {
                     break;
 
                 case Powerup.DECREASE_BALL_SIZE:
-                    for (int i = 0; i < gameMode.GetBalls().Count; i++) {
-                        gameMode.GetBalls()[i].ChangeBallSize();
+                    foreach (Ball ball in FindObjectsOfType<Ball>()) {
+                        ball.ChangeBallSize();
                     }
                     break;
 

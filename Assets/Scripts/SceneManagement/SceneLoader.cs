@@ -17,7 +17,6 @@ namespace BlockBreaker.SceneManagement {
 
         public void LoadStartScene()
         {
-            FindObjectOfType<GameStatus>().ResetGameStatus();
             SceneManager.LoadScene(0);
         }
     }

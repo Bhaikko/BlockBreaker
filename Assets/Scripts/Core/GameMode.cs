@@ -21,7 +21,7 @@ namespace BlockBreaker.Core {
 
         private SceneLoader sceneLoader;
 
-        private List<Ball> balls;
+        private int ballsCount;
         private Paddle paddle;
 
         public bool hasStarted = false;
@@ -32,7 +32,7 @@ namespace BlockBreaker.Core {
         {
             screenWidth = 2.625f * Camera.main.orthographicSize;
             
-            balls = new List<Ball>();
+            ballsCount = 0;
 
             sceneLoader = FindObjectOfType<SceneLoader>();
 
@@ -69,15 +69,15 @@ namespace BlockBreaker.Core {
 
         public void SpawnBall() {
             Ball spawnedBall = Instantiate<Ball>(ballPrefab);
-            balls.Add(spawnedBall);
+            ballsCount++;
         }
 
-        public void RemovePowerUpBalls() {
-
+        public void RemoveBall() {
+            ballsCount--;
         }
-
-        public List<Ball> GetBalls() {
-            return balls;
+        
+        public int GetBallsCount() {
+            return ballsCount;
         }
 
         private void RegisterBlocks() {
