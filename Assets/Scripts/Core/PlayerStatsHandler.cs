@@ -17,6 +17,10 @@ namespace BlockBreaker.Core {
                 DontDestroyOnLoad(gameObject);
             }
         }
+
+        private void Start() {
+            Reset();
+        }
         
 
         public void AddToScore(int score) {
@@ -25,6 +29,11 @@ namespace BlockBreaker.Core {
 
         public void ReduceLife() {
             this.livesLeft--;
+        }
+
+        public void Reset() {
+            livesLeft = 3;
+            score = 0;
         }
 
         public int GetLivesLeft() { return livesLeft; }

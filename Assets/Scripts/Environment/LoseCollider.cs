@@ -30,6 +30,7 @@ namespace BlockBreaker.Environment {
                     if (playerStats.GetLivesLeft() <= 0) {
                         // Destroy(playerStats);
                         SceneManager.LoadScene("Game Over"); 
+                        // playerStats.Reset();
                     } else {
                         gameMode.hasStarted = false;
                         gameMode.SpawnBall();

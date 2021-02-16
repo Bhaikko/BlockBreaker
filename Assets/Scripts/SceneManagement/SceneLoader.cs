@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 using BlockBreaker.UI;
+using BlockBreaker.Core;
 
 namespace BlockBreaker.SceneManagement {
     public class SceneLoader : MonoBehaviour
@@ -18,6 +19,7 @@ namespace BlockBreaker.SceneManagement {
         public void LoadStartScene()
         {
             SceneManager.LoadScene(0);
+            FindObjectOfType<PlayerStatsHandler>().Reset();
         }
     }
 }
