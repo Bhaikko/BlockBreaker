@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1759223836851029518, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
         type: 3}
+      propertyPath: score
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -1759223836851029518, guid: ea3bb64c9a2a52a4b88fc7804815b8c9,
+        type: 3}
       propertyPath: health
       value: 2
       objectReference: {fileID: 0}

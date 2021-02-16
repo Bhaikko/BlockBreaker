@@ -29,6 +29,11 @@ namespace BlockBreaker.Core {
 
         public void ReduceLife() {
             this.livesLeft--;
+            this.score -= 50;
+
+            if (this.score <= 0) {
+                this.score = 0;
+            }
         }
 
         public void Reset() {

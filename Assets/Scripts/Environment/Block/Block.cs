@@ -20,6 +20,8 @@ namespace BlockBreaker.Environment {
         [SerializeField] bool isBreakable = true;
         [SerializeField] int health = 1;
         [SerializeField] Sprite[] hitSprites = null;
+        [SerializeField] int score = 10;
+
 
         // Cached Reference
         GameMode gameMode;
@@ -121,6 +123,8 @@ namespace BlockBreaker.Environment {
             }
 
             gameMode.RemoveBlockMapping(transform.position.ToString());
+
+            FindObjectOfType<PlayerStatsHandler>().AddToScore(score);
 
             // gameObject refers to this game object
             Destroy(gameObject);
