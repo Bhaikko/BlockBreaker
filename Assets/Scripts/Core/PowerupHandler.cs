@@ -144,7 +144,6 @@ namespace BlockBreaker.Core {
         }
 
         public void ActivatePowerup(Powerup powerup, float duration) {
-            // Handle Stack of Powerups in future
             activePowerups[powerup] = true;
 
             ActivateSpecificPowerup(powerup);
@@ -158,8 +157,6 @@ namespace BlockBreaker.Core {
             activePowerups[powerup] = false;
 
             DeactivateSpecificPowerup(powerup);
-
-            Debug.Log("Deactivating Powerup");
         
         }
     }

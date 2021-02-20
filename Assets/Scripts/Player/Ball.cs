@@ -73,7 +73,11 @@ namespace BlockBreaker.Player {
             if (Input.GetMouseButtonDown(0)) {
                 gameMode.hasStarted = true;
                 
-                rigidBody2D.velocity = launchVelocity * launchSpeed; 
+                // rigidBody2D.velocity = launchVelocity * launchSpeed; 
+
+                foreach (Ball ball in FindObjectsOfType<Ball>()) {
+                    ball.GetComponent<Rigidbody2D>().velocity = launchVelocity * launchSpeed;
+                }
             }
         }
 

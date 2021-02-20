@@ -15,7 +15,7 @@ namespace BlockBreaker.UI {
         private void Start()
         {
             playerStatsHandler = FindObjectOfType<PlayerStatsHandler>();
-
+            
             playerScore.text = playerStatsHandler.GetScore().ToString();
             livesText.text = playerStatsHandler.GetLivesLeft().ToString();
         }
