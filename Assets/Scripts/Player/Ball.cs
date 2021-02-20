@@ -94,11 +94,14 @@ namespace BlockBreaker.Player {
                 Random.Range(0, randomFactor)    
             );
 
+            Vector2 downVelocity = new Vector2(0.0f, -1.0f);
+
             if (gameMode.hasStarted) {
                 AudioClip clip = ballSounds[Random.Range(0, ballSounds.Length)];
                 audioSource.PlayOneShot(clip);
 
                 rigidBody2D.velocity += velocityTweak;
+                rigidBody2D.velocity *= 1.005f;
             }
         }
 
